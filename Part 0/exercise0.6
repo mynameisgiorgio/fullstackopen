@@ -1,0 +1,21 @@
+title Exercise 0.6
+
+note over Browser
+document.getElementById('notes_form') instructs the code 
+to fetch the form-element from the page, and
+to register an event handler to handle the form submit event.
+end note 
+
+note over Browser
+The event handler immediately calls the method
+e.preventDefault() to prevent the defaulthandling of form submit.
+end note 
+
+note over Browser
+Then the event handler creates a new note,
+adds it to the notes list with the command notes.push(note),
+rerenders the note list on the page and sends the new note to the server.
+end note 
+
+Browser->Server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+Server-->Browser: json code: {"message":"note created"}
